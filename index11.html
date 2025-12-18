@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Георгий Рожков — Портфолио</title>
+  <meta name="description" content="Портфолио Георгия Рожкова (mambl) — студент УрФУ, 4 курс, Реклама и PR.">
+  <style>
+    :root{
+      --bg:#070707;
+      --card:#0f0f10;
+      --text:#e9e9ee;
+      --muted:#9a9aa8;
+      --accent1:#7b3fe4; /* purple */
+      --accent2:#2b2b2b;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(123,63,228,0.06), transparent),
+                  linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.06)), var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+      padding:40px 20px;
+    }
+    .wrap{max-width:1000px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent1),#3a2bd6);font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+    nav a:hover{color:var(--text)}
+
+    .hero{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:28px;border-radius:16px;box-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .photo{width:240px;height:320px;border-radius:12px;overflow:hidden;flex-shrink:0;position:relative;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+    .photo img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1);transition:transform .7s ease}
+    .photo:hover img{transform:scale(1.02)}
+    .info h1{margin:0 0 6px 0;font-size:26px}
+    .info .sub{color:var(--muted);margin-bottom:14px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:linear-gradient(90deg, rgba(123,63,228,0.12), rgba(58,43,214,0.06));padding:8px 12px;border-radius:999px;color:var(--text);font-size:13px}
+
+    .card{background:var(--card);padding:20px;border-radius:12px;margin-top:20px;border:1px solid rgba(255,255,255,0.02)}
+    h2{margin:0 0 12px 0}
+    .skills{display:flex;gap:12px;flex-wrap:wrap}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;color:var(--muted);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+    .contact-list{list-style:none;padding:0;margin:0}
+    .contact-list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* small responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}
+      .photo{width:100%;height:320px}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+
+    /* simple fade-in animations */
+    .fade{opacity:0;transform:translateY(8px);animation:fade .9s forwards}
+    .delay-1{animation-delay:.08s}
+    .delay-2{animation-delay:.16s}
+    .delay-3{animation-delay:.24s}
+    @keyframes fade{to{opacity:1;transform:none}}
+
+    /* subtle accent line */
+    .accent-line{height:4px;border-radius:8px;background:linear-gradient(90deg,var(--accent1), #3a2bd6);width:160px;margin-top:8px}
+
+    /* hover link */
+    a.cta{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg, rgba(123,63,228,0.18), rgba(58,43,214,0.12));color:var(--text);text-decoration:none}
+    a.cta:hover{transform:translateY(-3px)}
+
+    /* code comment visible only in file */
+    /*
+      Инструкция по публикации:
+      1) Создать репозиторий на GitHub, добавить этот файл как index.html и закоммитить.
+      2) В настройках репозитория -> Pages выбрать ветку main и папку / (root) -> Save.
+      3) Через минуту сайт будет доступен на username.github.io/repo
+    */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="mark">G</div>
+        <div>
+          <div style="font-weight:700">Георгий Рожков</div>
+          <div style="color:var(--muted);font-size:13px">mambl — студент УрФУ, 4 курс</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">О себе</a>
+        <a href="#skills">Навыки</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="hero card fade delay-1">
+      <div class="photo">
+        <!-- фото из локального пути -->
+        <img src="/mnt/data/IMG_2116 (2).PNG" alt="Георгий Рожков">
+      </div>
+      <div class="info">
+        <h1>Георгий Рожков (mambl)</h1>
+        <div class="sub">Студент УрФУ, 4 курс — Реклама и связи с общественностью<br>Из Миасса, сейчас в Екатеринбурге. План: 2 года работать по специальности, далее — свой бренд одежды.</div>
+        <div class="chips">
+          <div class="chip">Реклама & PR</div>
+          <div class="chip">Бренд-дизайн</div>
+          <div class="chip">Создание контента</div>
+        </div>
+        <div style="margin-top:18px">
+          <a class="cta" href="#contacts">Связаться</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card fade delay-2">
+      <h2>О себе</h2>
+      <div class="accent-line"></div>
+      <p style="color:var(--muted);margin-top:12px;line-height:1.6">Я — Георгий Рожков, студент 4 курса УрФУ по направлению «Реклама и связи с общественностью». Родом из Миасса, переехал в Екатеринбург ради учёбы. Планирую развиваться в маркетинге и рекламе — в ближайшие 2 года работать по специальности, а позже запустить собственный бренд одежды.</p>
+    </section>
+
+    <div class="grid">
+      <div id="skills" class="card fade delay-3">
+        <h2>Навыки</h2>
+        <div class="skills" style="margin-top:10px">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript (базовый)</div>
+          <div class="skill">Figma / дизайн</div>
+          <div class="skill">Копирайтинг</div>
+        </div>
+
+        <h3 style="margin-top:16px">Что я ещё могу добавить</h3>
+        <p style="color:var(--muted);margin-top:8px">Если нужно — могу сделать адаптивную версию, добавить галерею работ, страницу с резюме в PDF и форму для обратной связи.</p>
+      </div>
+
+      <div id="contacts" class="card fade delay-3">
+        <h2>Контакты</h2>
+        <ul class="contact-list" style="margin-top:8px">
+          <li>Email: <a href="mailto:gerarozhkov.03@mail.ru" style="color:var(--text);text-decoration:none">gerarozhkov.03@mail.ru</a></li>
+          <li>Телефон: <a href="tel:+7-950-748-4495" style="color:var(--text);text-decoration:none">+7 950 748 4495</a></li>
+          <li>Местоположение: Миасс → Екатеринбург</li>
+          <li>Образование: УрФУ, направление «Реклама и PR», 4 курс</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      © {2025} Георгий Рожков — Портфолио. Сделано с использованием HTML и CSS. Если хочешь — подготовлю файлы для загрузки на GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    // Небольшой JS: плавная прокрутка
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault(); const id=a.getAttribute('href'); if(id==="#") return;
+        const el=document.querySelector(id); if(!el) return; el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
